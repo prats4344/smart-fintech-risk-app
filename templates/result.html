@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 60px;
+        }
+        .result-box {
+            display: inline-block;
+            padding: 30px 50px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .risk {
+            font-size: 28px;
+            color: #e74c3c;
+        }
+        .low-risk {
+            color: #2ecc71;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>🔎 Predicted Credit Risk</h1>
+        <div class="risk {% if prediction == 'Low Risk ✅' %}low-risk{% endif %}">
+            {{ prediction }}
+        </div>
+    </div>
+
+    <br><br>
+    <a href="/">🔙 Back to Home</a>
+</body>
+</html>

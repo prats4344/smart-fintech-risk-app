@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+            text-align: center;
+        }
+        img {
+            width: 45%;
+            margin: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        .stats {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Portfolio Risk Summary Dashboard</h1>
+
+    <div class="stats">
+        <p><strong>Total Customers:</strong> {{ metrics.total }}</p>
+        <p><strong>Low Risk:</strong> {{ metrics.low_risk }}</p>
+        <p><strong>High Risk:</strong> {{ metrics.high_risk }}</p>
+    </div>
+
+    <img src="{{ url_for('static', filename='risk_pie_chart.png') }}" alt="Risk Distribution">
+    <img src="{{ url_for('static', filename='credit_vs_risk.png') }}" alt="Credit vs Risk">
+
+    <br><br>
+    <a href="/">🔙 Back to Home</a>
+</body>
+</html>

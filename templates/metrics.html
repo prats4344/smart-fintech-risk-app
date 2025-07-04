@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Metrics Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: inline-block;
+            width: 80%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        img {
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+        }
+        pre {
+            background-color: #f3f3f3;
+            padding: 20px;
+            text-align: left;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 15px;
+            color: #333;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Model Metrics Dashboard</h1>
+
+        <h2>Confusion Matrix</h2>
+        <img src="{{ url_for('static', filename='confusion_matrix.png') }}" alt="Confusion Matrix">
+
+        <h2>Feature Importance</h2>
+        <img src="{{ url_for('static', filename='feature_importance.png') }}" alt="Feature Importance">
+
+        <h2>📋 Detailed Classification Report</h2>
+        <pre>{{ metrics_text }}</pre>
+
+        <a href="/" class="back-btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>
+
+

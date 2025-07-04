@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>📋 Enter Customer Details</h2>
+<form action="/predict" method="POST">
+    <label>Age: <input type="number" name="age" required></label><br><br>
+    <label>Job (0-3) 0=unemployed,1=less skilled,2=skilled,3=highly skilled: <input type="number" name="job" min="0" max="3" required></label><br><br>
+    
+    <label>Housing:
+        <select name="housing">
+            <option value="own">Own</option>
+            <option value="free">Free</option>
+            <option value="rent">Rent</option>
+        </select>
+    </label><br><br>
+    
+    <label>Saving Accounts:
+        <select name="saving_accounts">
+            <option value="NA">NA</option>
+            <option value="little">Little</option>
+            <option value="moderate">Moderate</option>
+            <option value="rich">Rich</option>
+            <option value="quite rich">Quite Rich</option>
+        </select>
+    </label><br><br>
+    
+    <label>Checking Account:
+        <select name="checking_account">
+            <option value="NA">NA</option>
+            <option value="little">Little</option>
+            <option value="moderate">Moderate</option>
+            <option value="rich">Rich</option>
+        </select>
+    </label><br><br>
+
+    <label>Credit Amount: <input type="number" name="credit_amount" required></label><br><br>
+    <label>Duration (months): <input type="number" name="duration" required></label><br><br>
+    
+    <label>Purpose:
+        <select name="purpose">
+            <option value="radio/TV">Radio/TV</option>
+            <option value="education">Education</option>
+            <option value="car">Car</option>
+            <option value="furniture/equipment">Furniture/Equipment</option>
+            <option value="business">Business</option>
+            <option value="repairs">Repairs</option>
+            <option value="vacation">Vacation</option>
+            <option value="domestic appliances">Domestic Appliances</option>
+            <option value="others">others</option>
+        </select>
+    </label><br><br>
+
+
+    < <input type="submit" value="📊 Predict Risk"class="btn">
+</form>
+{% endblock %}

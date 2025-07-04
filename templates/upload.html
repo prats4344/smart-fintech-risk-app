@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Portfolio CSV</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 60px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: inline-block;
+            width: 60%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        input[type="file"] {
+            font-size: 16px;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        .summary {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #34495e;
+        }
+        a.download-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+        a.download-link:hover {
+            background-color: #27ae60;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            text-decoration: none;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📂 Upload Your Portfolio CSV</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required><br>
+            <input type="submit" value="📊 Calculate Portfolio Risk">
+        </form>
+
+        {% if message %}
+            <div class="summary">
+                <h2>{{ message }}</h2>
+                <p>🔺 High Risk: <strong>{{ high_risk }}</strong></p>
+                <p>✅ Low Risk: <strong>{{ low_risk }}</strong></p>
+                <a class="download-link" href="/download">📥 Download Results</a>
+            </div>
+        {% endif %}
+
+        <br>
+        <a href="/" class="back-btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>

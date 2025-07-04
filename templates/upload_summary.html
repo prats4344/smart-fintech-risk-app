@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Risk Summary</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        img {
+            width: 50%;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        a:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>📈 Portfolio Risk Summary</h1>
+    <p>This pie chart shows how many clients in your portfolio are High Risk vs Low Risk.</p>
+
+    <img src="{{ url_for('static', filename='risk_pie_chart.png') }}" alt="Risk Pie Chart">
+
+    <br>
+    <a href="/">🔙 Back to Home</a>
+</body>
+</html>

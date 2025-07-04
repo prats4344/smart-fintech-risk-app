@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Fintech Risk Assessment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 280px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>💼 Smart Fintech Risk Assessment System</h1>
+    <p>Predict, Monitor & Assess Credit Risk Efficiently</p>
+
+    <div class="card-container">
+        <div class="card">
+            <a href="/predict">📝 Manual Risk Prediction</a>
+            <p>Enter customer details and get instant prediction</p>
+        </div>
+        <div class="card">
+            <a href="/metrics">📊 Model Performance Metrics</a>
+            <p>View confusion matrix, classification report & features</p>
+        </div>
+        <div class="card">
+            <a href="/upload">📂 Portfolio Risk Upload</a>
+            <p>Upload a CSV portfolio and calculate bulk risks</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

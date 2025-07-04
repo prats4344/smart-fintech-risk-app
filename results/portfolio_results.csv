@@ -1,0 +1,4 @@
+Age,Sex,Job,Housing,Saving Account,Checking Account,Credit Amount,Duration,Purpose,Predicted Risk
+35,Male,1,own,little,moderate,2500,24,TV,Low Risk ✅
+45,Female,2,Rent,moderate,high,4000,12,Car,Low Risk ✅
+30,Male,1,own,quite rich,rich,6000,36,Education,Low Risk ✅
