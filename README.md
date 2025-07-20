@@ -1,7 +1,7 @@
 # 🧠 Smart Fintech Risk Assessment System
 
 A full-stack Machine Learning web app built with **Flask**, **Pandas**, and **Scikit-learn**, designed to assess credit risk at both individual and portfolio levels.  
-This Goldman Sachs–worthy project includes **manual prediction**, **portfolio upload analysis**, and rich **model evaluation dashboards**.
+This project includes **manual prediction**, **portfolio upload analysis**, and rich **model evaluation dashboards**.
 
 ---
 
